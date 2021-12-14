@@ -9,20 +9,22 @@ import com.generics.testcases.Maximum;
 /**
  * Unit test for simple App.
  */
-
-public class MaximumTest
-{
+public class MaximumTest {
     @Test
     public void intMax() {
-        int assertValue = Maximum.getmaximum(10,20,5);
-        Assert.assertEquals(20,assertValue);
+        int actualValue = Maximum.testMaximum(10, 20, 5);
+        Assert.assertEquals(20, actualValue);
     }
+
+    @Test
     public void floatMax() {
-        float assertValue = Maximum.getmaximum(10f,20f,5f);
-        Assert.assertEquals(20,assertValue,0);
+        float actualValue = Maximum.testMaximum(11f,52f,36f);
+        Assert.assertEquals(52f,actualValue,0);
     }
+
+    @Test
     public void stringMax() {
-        String assertValue = Maximum.getmaximum("abc","def","ghi");
-        Assert.assertEquals("ghi",assertValue);
+        String actualValue = Maximum.testMaximum("ABC","def","xyz");
+        Assert.assertEquals("xyz",actualValue);
     }
 }
